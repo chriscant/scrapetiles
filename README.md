@@ -1,13 +1,12 @@
 # scrapetiles.js
 
-Command line tool to download map tiles from a tile server for specified zoom levels and saves them in a suitable data directory.
+Command line tool to download map tiles from a tile server for specified zoom levels and save them in a suitable data directory.
 
-Please ensure that you have permission to access and subsequently use the tiles you are downloading
+Please ensure that you have permission to access and subsequently use the tiles you are downloading.
 
 usage: 
 ```
 node scrapetiles.js url zoomfrom zoomto directory
-
 ```
 
 If you run this command:
