@@ -1,4 +1,6 @@
-// node scrapetiles.js https://tiles.ilovefreegle.org/tile 5 9 data
+// node scrapetiles.js https://example.org/tile 5 9 data
+
+// Downloads all map tiles from a tile server for specified zoom levels and saves them in a suitable data directory
 
 import fs from 'fs'
 import path from 'path'
@@ -51,7 +53,7 @@ export async function run (argv) {
       console.log('zoom', zoom, 'maxtileno', maxtileno)
       const zoomFolder = path.join(outputFolder, zoom.toString())
       fs.mkdirSync(zoomFolder, { recursive: true })
-      // https://tiles.ilovefreegle.org/tile/5/15/10.png
+      // https://example.org/tile/5/15/10.png
       for (let y = 0; y < maxtileno; y++) {
         const tilefolder = path.join(zoomFolder, y.toString())
         fs.mkdirSync(tilefolder, { recursive: true })
