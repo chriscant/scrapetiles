@@ -19,7 +19,7 @@ The data directory would be created with subdirectories 5, 6, 7, 8 and 9.
 Map tile images would be downloaded, eg `https://example.org/tile/5/0/0.png` would be downloaded into `data/5/0/0.png`
 
 The number of tiles at each zoom level is worked out automatically ie `Math.pow(2, zoom)`.
-The tiles are number 0 to the maximum-1.
+The tiles are numbered 0 to the maximum-1.
 So the final tile 
 * at zoom level 5 is `data/5/31/31.png`
 * at zoom level 6 is `data/6/63/63.png`

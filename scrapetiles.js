@@ -66,15 +66,15 @@ export async function run (argv) {
             const req = https.request(url, {}, function (res) {
               const chunks = []
               res.on('data', function (chunk) {
-                console.log('data', chunk.length)
+                // console.log('data', chunk.length)
                 chunks.push(chunk)
               })
               res.on('end', function () {
-                console.log('end', chunks.length)
+                // console.log('end', chunks.length)
                 const allchunks = Buffer.concat(chunks)
-                console.log('allchunks', allchunks.length)
+                // console.log('allchunks', allchunks.length)
                 const tilepath = path.join(tilefolder, z + '.png')
-                console.log('tilepath', tilepath)
+                // console.log('tilepath', tilepath)
                 fs.writeFileSync(tilepath, allchunks, 'binary', function (e) {
                   console.log(e.message)
                   reject(new Error('write error'))
